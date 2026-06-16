@@ -248,28 +248,30 @@ const spyObserver = new IntersectionObserver(entries => {
 
 sections.forEach(s => spyObserver.observe(s));
 
-/* ===========================
+
+  /* ===========================
    POWER BI EMBED LOADER
    =========================== */
-   const PBI_REPORTS = {
-    'pbi-alarmes': 'https://app.powerbi.com/view?r=eyJrIjoiZDRlYTM1ZGUtMGI5NS00ZjdmLTllOTItN2I1Y2I4ZDQzNjMyIiwidCI6IjRjMzMwMTc0LWI0NjMtNDAwYy1hODRiLWVlM2M2YjcwNWM2MiJ9',
-  };
-  
-  function loadPBI(containerId, inputId) {
-    const input = document.getElementById(inputId);
-    const url = (input ? input.value.trim() : '') || PBI_REPORTS[containerId];
-    const container = document.getElementById(containerId);
-  
-    if (!url || !url.includes('powerbi.com')) {
-      if (input) input.style.borderColor = '#e53e3e';
-      return;
-    }
-  
-    container.classList.add('pbi-placeholder--loaded');
-    container.innerHTML = `<iframe src="${url}" allowFullScreen="true"></iframe>`;
+const PBI_REPORTS = {
+  'pbi-batch':   'https://app.powerbi.com/view?r=eyJrIjoiMTM0ODZiNWYtODUzYy00ODc5LTk2MzQtOGE0NTU2MjllNzNkIiwidCI6IjRjMzMwMTc0LWI0NjMtNDAwYy1hODRiLWVlM2M2YjcwNWM2MiJ9&pageName=ac03fc22a83a16d459eaCOLE_AQUI_O_LINK_DO_BATCH_TRACKING',
+  'pbi-alarmes': 'https://app.powerbi.com/view?r=eyJrIjoiZDRlYTM1ZGUtMGI5NS00ZjdmLTllOTItN2I1Y2I4ZDQzNjMyIiwidCI6IjRjMzMwMTc0LWI0NjMtNDAwYy1hODRiLWVlM2M2YjcwNWM2MiJ9',
+};
+
+function loadPBI(containerId, inputId) {
+  const input = document.getElementById(inputId);
+  const url = (input ? input.value.trim() : '') || PBI_REPORTS[containerId];
+  const container = document.getElementById(containerId);
+
+  if (!url || !url.includes('powerbi.com')) {
+    if (input) input.style.borderColor = '#e53e3e';
+    return;
   }
-  
-  // Carrega automaticamente apenas os reports com link fixo
-  document.addEventListener('DOMContentLoaded', () => {
-    Object.keys(PBI_REPORTS).forEach(id => loadPBI(id, null));
-  });
+
+  container.classList.add('pbi-placeholder--loaded');
+  container.innerHTML = `<iframe src="${url}" allowFullScreen="true"></iframe>`;
+}
+
+// Carrega automaticamente ao abrir o site
+document.addEventListener('DOMContentLoaded', () => {
+  Object.keys(PBI_REPORTS).forEach(id => loadPBI(id, null));
+});
