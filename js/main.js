@@ -247,3 +247,19 @@ const spyObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.4 });
 
 sections.forEach(s => spyObserver.observe(s));
+
+/* ===========================
+   POWER BI EMBED LOADER
+   =========================== */
+   function loadPBI(containerId, inputId) {
+    const url = document.getElementById(inputId).value.trim();
+    const container = document.getElementById(containerId);
+  
+    if (!url || !url.includes('powerbi.com')) {
+      document.getElementById(inputId).style.borderColor = '#e53e3e';
+      return;
+    }
+  
+    container.classList.add('pbi-placeholder--loaded');
+    container.innerHTML = `<iframe src="${url}" allowFullScreen="true"></iframe>`;
+  }

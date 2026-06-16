@@ -48,7 +48,7 @@
           <span class="metric__label">Anos de Experiência</span>
         </div>
         <div class="metric">
-          <span class="metric__number" data-target="15  ">0</span><span class="metric__unit">+</span>
+          <span class="metric__number" data-target="15">0</span><span class="metric__unit">+</span>
           <span class="metric__label">Projetos Entregues</span>
         </div>
         <div class="metric">
@@ -155,7 +155,7 @@
           <div class="stack-items">
             <div class="stack-item"><span class="stack-icon">📋</span>Power BI</div>
             <div class="stack-item"><span class="stack-icon">🗃️</span>SQL Server</div>
-            <div class="stack-item"><span class="stack-icon">🐘</span>PostgreSQL</div>
+            <div class="stack-item"><span class="stack-icon">🐘</span>Oracle</div>
             <div class="stack-item"><span class="stack-icon">📑</span>DAX</div>
             <div class="stack-item"><span class="stack-icon">🔄</span>ETL/SSIS</div>
           </div>
@@ -191,73 +191,112 @@
       <h2 class="section-title center">Projetos Selecionados</h2>
       <div class="projects__grid">
 
+        <!-- PROJETO DESTAQUE: BATCH TRACKING -->
         <article class="project-card project-card--featured">
           <div class="project-card__header">
-            <span class="project-card__type">Data Science · ML</span>
+            <span class="project-card__type">PI System · Event Frames · Power BI</span>
             <div class="project-card__links">
               <a href="#" aria-label="GitHub" class="project-link">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
               </a>
-              <a href="#" aria-label="Demo" class="project-link">↗</a>
             </div>
           </div>
-          <h3 class="project-card__title">Modelo Preditivo de Churn para Multinacional</h3>
-          <p class="project-card__desc">Pipeline end-to-end de ML para predição de churn de clientes em mercados LATAM. Reduziu a taxa de cancelamento em 18% via ações proativas baseadas no score de risco.</p>
+          <h3 class="project-card__title">Batch Tracking — Rastreamento de Lote Industrial (Planta Limeira)</h3>
+          <p class="project-card__desc">
+            Algoritmo de rastreamento retroativo de lotes de produto ao longo de ~15 áreas do processo fabril. A partir do número de lote inserido no estágio final, o sistema percorre cada etapa anterior identificando os <em>flags</em> de passagem de volume, os parâmetros de processo e os dados de qualidade registrados nos Event Frames do PI AF. O resultado é consolidado em um report Power BI que integra todos os Event Frames com uma API JSON do sistema de rastreabilidade de matéria-prima — cruzando notas fiscais, volumes de entrada e o histórico completo de fabricação do produto final.
+          </p>
+          <div class="project-card__pbi-embed">
+            <div class="pbi-placeholder" id="pbi-batch">
+              <div class="pbi-placeholder__inner">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="7" height="7" rx="1" fill="#F2C811"/><rect x="14" y="3" width="7" height="7" rx="1" fill="#F2C811" opacity="0.6"/><rect x="3" y="14" width="7" height="7" rx="1" fill="#F2C811" opacity="0.6"/><rect x="14" y="14" width="7" height="7" rx="1" fill="#F2C811" opacity="0.3"/></svg>
+                <p>Cole o link embed do Power BI para visualizar o report</p>
+                <input
+                  type="text"
+                  class="pbi-input"
+                  id="pbi-input-batch"
+                  placeholder="https://app.powerbi.com/reportEmbed?reportId=..."
+                />
+                <button class="pbi-btn" onclick="loadPBI('pbi-batch', 'pbi-input-batch')">Carregar Report</button>
+              </div>
+            </div>
+          </div>
           <div class="project-card__tech">
-            <span>Python</span><span>XGBoost</span><span>AWS SageMaker</span><span>Airflow</span>
+            <span>PI AF</span><span>Event Frames</span><span>PI Tags</span><span>Power BI</span><span>API JSON</span><span>Python</span>
           </div>
         </article>
-
+      
+        <!-- PROJETO: GESTÃO DE CUSTOS E ESTOQUE -->
         <article class="project-card">
           <div class="project-card__header">
-            <span class="project-card__type">Business Intelligence</span>
+            <span class="project-card__type">Business Intelligence · SAP · Power BI</span>
             <div class="project-card__links">
               <a href="#" aria-label="GitHub" class="project-link">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
               </a>
-              <a href="#" aria-label="Demo" class="project-link">↗</a>
             </div>
           </div>
-          <h3 class="project-card__title">Dashboard Executivo de KPIs Globais</h3>
-          <p class="project-card__desc">Suite de dashboards em Power BI conectados a Data Warehouse no Azure Synapse, consolidando dados de 5 países para o C-Level.</p>
+          <h3 class="project-card__title">Dashboard Executivo — Centro de Custos & Estoque</h3>
+          <p class="project-card__desc">
+            Suite de dashboards conectada a múltiplas fontes do SAP hospedado em Oracle. Modelagem dimensional e cálculos em DAX e Python geram projeções de gastos por centro de custo e item, com visão Planejado × Atual em tempo real para o time financeiro e de operações.
+          </p>
+          <div class="project-card__pbi-embed">
+            <div class="pbi-placeholder" id="pbi-custos">
+              <div class="pbi-placeholder__inner">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="7" height="7" rx="1" fill="#F2C811"/><rect x="14" y="3" width="7" height="7" rx="1" fill="#F2C811" opacity="0.6"/><rect x="3" y="14" width="7" height="7" rx="1" fill="#F2C811" opacity="0.6"/><rect x="14" y="14" width="7" height="7" rx="1" fill="#F2C811" opacity="0.3"/></svg>
+                <p>Cole o link embed do Power BI para visualizar o report</p>
+                <input
+                  type="text"
+                  class="pbi-input"
+                  id="pbi-input-custos"
+                  placeholder="https://app.powerbi.com/reportEmbed?reportId=..."
+                />
+                <button class="pbi-btn" onclick="loadPBI('pbi-custos', 'pbi-input-custos')">Carregar Report</button>
+              </div>
+            </div>
+          </div>
           <div class="project-card__tech">
-            <span>Power BI</span><span>DAX</span><span>Azure Synapse</span><span>SQL</span>
+            <span>Power BI</span><span>SAP</span><span>Oracle</span><span>DAX</span><span>Python</span>
           </div>
         </article>
-
+      
+        <!-- PROJETO: DATA WAREHOUSE MULTINACIONAL -->
         <article class="project-card">
           <div class="project-card__header">
-            <span class="project-card__type">Desenvolvimento · Data</span>
+            <span class="project-card__type">Engenharia de Dados · DW · ETL</span>
             <div class="project-card__links">
               <a href="#" aria-label="GitHub" class="project-link">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
               </a>
-              <a href="#" aria-label="Demo" class="project-link">↗</a>
             </div>
           </div>
-          <h3 class="project-card__title">API de Análise Preditiva de Vendas</h3>
-          <p class="project-card__desc">REST API em FastAPI com modelo de forecasting de séries temporais, integrada a sistemas ERP via webhooks. Utilizada por equipes comerciais de 3 regiões.</p>
+          <h3 class="project-card__title">Gestão de Data Warehouses — 2 Plantas Multinacionais</h3>
+          <p class="project-card__desc">
+            Responsável pelo end-to-end dos DWs de duas plantas industriais: ingestão de dados de fontes heterogêneas (SQL Server, Oracle, APIs REST, OLEDB, ODBC), pré-ETL customizado por caso de uso e governança dos dataflows no Power BI Dataflows e pipelines Python. Toda a cadeia desde a extração na fonte até a disponibilização para os usuários finais.
+          </p>
           <div class="project-card__tech">
-            <span>FastAPI</span><span>Prophet</span><span>PostgreSQL</span><span>Docker</span>
+            <span>SQL Server</span><span>Oracle</span><span>OLEDB/ODBC</span><span>Power BI Dataflows</span><span>Python</span><span>APIs REST</span>
           </div>
         </article>
-
+      
+        <!-- PROJETO: INFRAESTRUTURA PI SYSTEM & DIGITAL TWIN -->
         <article class="project-card">
           <div class="project-card__header">
-            <span class="project-card__type">Engenharia de Dados</span>
+            <span class="project-card__type">PI System · OPC · Infraestrutura · Digital Twin</span>
             <div class="project-card__links">
               <a href="#" aria-label="GitHub" class="project-link">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
               </a>
             </div>
           </div>
-          <h3 class="project-card__title">Pipeline de Dados em Tempo Real</h3>
-          <p class="project-card__desc">Arquitetura de streaming com Kafka + Spark Structured Streaming para processamento de eventos de e-commerce, alimentando alertas em tempo real para operações.</p>
+          <h3 class="project-card__title">Reestruturação PI System & Digital Twin da Planta</h3>
+          <p class="project-card__desc">
+            Reestruturação completa das VMs da infraestrutura PI System (PI Vision, PI AF, SQL Server, PI Data Archive/Historiador), implementando comunicação redundante entre interfaces OPC — com failover automático onde cada interface opera como backup da outra. Desenvolvimento de uma estrutura espelho do supervisório em PI Vision, criando um <em>digital twin</em> da planta acessível a engenharia, produção, supervisão e gerência. Inclui análises de falhas de equipamentos com correlação de causas via PI AF Analytics e investigação de desvios de produção por meio de séries temporais históricas.
+          </p>
           <div class="project-card__tech">
-            <span>Kafka</span><span>PySpark</span><span>Airflow</span><span>AWS</span>
+            <span>PI Vision</span><span>PI AF</span><span>OPC DA/UA</span><span>Windows Server</span><span>PI Data Archive</span><span>Digital Twin</span>
           </div>
         </article>
-
+      
       </div>
       <div class="projects__more">
         <a href="https://github.com/seuusuario" class="btn btn--ghost" target="_blank">Ver todos no GitHub ↗</a>
