@@ -968,3 +968,50 @@ ul { list-style: none; }
     background: #fff;
     transform: translateY(-1px);
   }
+
+/* AVATAR NO HERO */
+.hero__name-row {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 28px;
+  opacity: 0;
+  animation: fadeUp 0.7s 0.4s forwards;
+}
+
+/* remove o margin-bottom que o hero__name já tinha sozinho */
+.hero__name-row .hero__name {
+  margin-bottom: 0;
+  opacity: 1;
+  animation: none;
+}
+
+.hero__avatar {
+  width: 90px;
+  height: 90px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--cyan);
+  box-shadow: 0 0 0 4px rgba(0, 212, 255, 0.15);
+}
+
+.hero__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+@media (max-width: 700px) {
+  .hero__name-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .hero__avatar {
+    width: 72px;
+    height: 72px;
+  }
+}
