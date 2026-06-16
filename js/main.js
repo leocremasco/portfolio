@@ -251,15 +251,25 @@ sections.forEach(s => spyObserver.observe(s));
 /* ===========================
    POWER BI EMBED LOADER
    =========================== */
-   function loadPBI(containerId, inputId) {
-    const url = document.getElementById(inputId).value.trim();
+   const PBI_REPORTS = {
+    'pbi-alarmes': 'https://app.powerbi.com/view?r=eyJrIjoiZDRlYTM1ZGUtMGI5NS00ZjdmLTllOTItN2I1Y2I4ZDQzNjMyIiwidCI6IjRjMzMwMTc0LWI0NjMtNDAwYy1hODRiLWVlM2M2YjcwNWM2MiJ9',
+  };
+  
+  function loadPBI(containerId, inputId) {
+    const input = document.getElementById(inputId);
+    const url = (input ? input.value.trim() : '') || PBI_REPORTS[containerId];
     const container = document.getElementById(containerId);
   
     if (!url || !url.includes('powerbi.com')) {
-      document.getElementById(inputId).style.borderColor = '#e53e3e';
+      if (input) input.style.borderColor = '#e53e3e';
       return;
     }
   
     container.classList.add('pbi-placeholder--loaded');
     container.innerHTML = `<iframe src="${url}" allowFullScreen="true"></iframe>`;
   }
+  
+  // Carrega automaticamente apenas os reports com link fixo
+  document.addEventListener('DOMContentLoaded', () => {
+    Object.keys(PBI_REPORTS).forEach(id => loadPBI(id, null));
+  });
