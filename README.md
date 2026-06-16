@@ -141,9 +141,9 @@ cd portfolio
 
 Quer conversar sobre dados, PI System ou uma oportunidade?
 
-- 💼 [linkedin.com/in/leonardocremasco](https://linkedin.com/in/leonardocremasco)
+- 💼 [LinkedIn](https://linkedin.com/in/leonardocremasco)
 - 📧 lcremasco@outlook.com
-- 🌐 [leonardocremasco.github.io/portfolio](leonardocremasco.github.io/portfolio/#)
+- 🌐 [Portfólio Profissional](leonardocremasco.github.io/portfolio/#)
 
 ---
 
