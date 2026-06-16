@@ -969,6 +969,8 @@ ul { list-style: none; }
     transform: translateY(-1px);
   }
 
+
+
 /* AVATAR NO HERO */
 .hero__name-row {
   display: flex;
@@ -987,8 +989,8 @@ ul { list-style: none; }
 }
 
 .hero__avatar {
-  width: 90px;
-  height: 90px;
+  width: 300px;
+  height: 300px;
   flex-shrink: 0;
   border-radius: 50%;
   overflow: hidden;
@@ -997,7 +999,7 @@ ul { list-style: none; }
 }
 
 .hero__avatar img {
-  width: 100%;
+  width: 95%;
   height: 100%;
   object-fit: cover;
   object-position: center top;
