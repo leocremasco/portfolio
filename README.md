@@ -7,8 +7,8 @@
 *Transformando dados industriais em decisões estratégicas*
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/leonardocremasco)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/seuusuario)
-[![Portfolio](https://img.shields.io/badge/Portfolio-00D4FF?style=for-the-badge&logo=vercel&logoColor=black)](https://seuusuario.github.io/portfolio)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/leocremasco)
+[![Portfolio](https://img.shields.io/badge/Portfolio-00D4FF?style=for-the-badge&logo=vercel&logoColor=black)](https://leocremasco.github.io/portfolio/#)
 
 </div>
 
@@ -86,11 +86,69 @@ Minha stack une o ecossistema **AVEVA PI System** (PI AF, PI Vision, PI Data Arc
 
 ## 🎓 Formação
 
-- 🎓 **Pós-Graduação** em Ciência de Dados — *Instituição*
-- 🎓 **Bacharelado** em Nome do Curso — *Universidade*
-- 📜 **Certificação** Power BI Data Analyst — Microsoft
-- 📜 **Certificação** AWS Cloud Practitioner — Amazon
+- 🎓 **Bacharelado** em Engenharia da COMPUTAÇÃO — *EEP - Escola de Engenharia de Piracicaba*
+- 📜 **Certificação** Advanced Visualizations & Dashboards: Visualization Using Python — *SkillSoft*
+- 📜 **Certificação** Especialização em Power BI: ETL, DAX, Modelação de Dados e Dashbords Executivos — *Dados Criativos*
+- 📜 **Certificação** Certificado de Proficiência e Fluência em Língua Inglesa (CEFR Nível B2) — *University of Cambridge*
+- 📜 **Certificação** Curso de Version Control: Git & Github — *Curso em Vídeo*
 
 ---
 
 ## 📂 Estrutura do Repositório
+portfolio/
+
+├── index.html              # Página principal
+
+├── css/
+
+│   └── style.css           # Estilos
+
+├── js/
+
+│   └── main.js             # Interatividade e embeds
+
+├── assets/
+
+│   └── reports/            # PDFs exportados (opcional)
+
+├── .github/
+
+│   └── workflows/
+
+│       └── deploy.yml      # Deploy automático GitHub Pages
+
+└── README.md
+
+---
+
+## ⚙️ Como rodar localmente
+
+```bash
+# Clone o repositório
+git clone https://github.com/seuusuario/portfolio.git
+
+# Entre na pasta
+cd portfolio
+
+# Abra no navegador (sem servidor necessário)
+# No VS Code: instale a extensão Live Server e clique em "Go Live"
+# Ou simplesmente abra o index.html no navegador
+```
+
+---
+
+## 📬 Contato
+
+Quer conversar sobre dados, PI System ou uma oportunidade?
+
+- 💼 [linkedin.com/in/leonardocremasco](https://linkedin.com/in/leonardocremasco)
+- 📧 lcremasco@outlook.com
+- 🌐 [leonardocremasco.github.io/portfolio](leonardocremasco.github.io/portfolio/#)
+
+---
+
+<div align="center">
+
+*Desenvolvido por Leonardo Cremasco · 2026*
+
+</div>
