@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seu Nome · Data Scientist & BI Developer</title>
+  <meta name="description" content="Data Scientist e Business Intelligence Developer com experiência em multinacionais. Portfólio de projetos em Python, SQL, Power BI e ML." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">
+      <span class="logo-bracket">{</span>
+      <span class="logo-name">SN</span>
+      <span class="logo-bracket">}</span>
+    </div>
+    <ul class="nav__links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#experiencia">Experiência</a></li>
+      <li><a href="#contato" class="nav__cta">Contato</a></li>
+    </ul>
+    <button class="nav__burger" aria-label="Menu" id="burger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <canvas id="particle-canvas"></canvas>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Data Scientist · BI Developer · Software Engineer</p>
+      <h1 class="hero__name">Seu Nome<span class="hero__cursor">_</span></h1>
+      <p class="hero__tagline">Transformo dados em decisões.<br/>De pipelines ETL a dashboards executivos — em escala multinacional.</p>
+      <div class="hero__actions">
+        <a href="#projetos" class="btn btn--primary">Ver Projetos</a>
+        <a href="#contato" class="btn btn--ghost">Fale Comigo</a>
+      </div>
+      <div class="hero__metrics">
+        <div class="metric">
+          <span class="metric__number" data-target="5">0</span><span class="metric__unit">+</span>
+          <span class="metric__label">Anos de Experiência</span>
+        </div>
+        <div class="metric">
+          <span class="metric__number" data-target="20">0</span><span class="metric__unit">+</span>
+          <span class="metric__label">Projetos Entregues</span>
+        </div>
+        <div class="metric">
+          <span class="metric__number" data-target="3">0</span><span class="metric__unit"></span>
+          <span class="metric__label">Países de Atuação</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll-hint">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="section" id="sobre">
+    <div class="container">
+      <div class="sobre__grid">
+        <div class="sobre__text">
+          <p class="section-eyebrow">// sobre mim</p>
+          <h2 class="section-title">Dados são a <em>linguagem</em> do negócio</h2>
+          <p class="sobre__bio">
+            Sou cientista de dados com sólida experiência em Business Intelligence, atuando em ambientes corporativos de alto impacto — incluindo multinacionais onde análises guiam decisões estratégicas para múltiplos mercados.
+          </p>
+          <p class="sobre__bio">
+            Minha trajetória une o rigor analítico da ciência de dados com a praticidade do desenvolvimento de software: construo desde modelos preditivos em Python até soluções full-stack que colocam insights nas mãos de quem decide.
+          </p>
+          <div class="sobre__tags">
+            <span class="tag">Machine Learning</span>
+            <span class="tag">ETL &amp; Data Pipelines</span>
+            <span class="tag">Dashboards Executivos</span>
+            <span class="tag">Análise Estatística</span>
+            <span class="tag">Desenvolvimento Web</span>
+            <span class="tag">Ambiente Multinacional</span>
+          </div>
+        </div>
+        <div class="sobre__education">
+          <p class="section-eyebrow">// formação</p>
+          <div class="education-list">
+            <div class="edu-item">
+              <div class="edu-item__year">2024</div>
+              <div class="edu-item__body">
+                <h4>Pós-Graduação em Ciência de Dados</h4>
+                <p>Universidade / Instituição</p>
+              </div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-item__year">2022</div>
+              <div class="edu-item__body">
+                <h4>Bacharelado em Nome do Curso</h4>
+                <p>Universidade</p>
+              </div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-item__year">Cert</div>
+              <div class="edu-item__body">
+                <h4>AWS Cloud Practitioner</h4>
+                <p>Amazon Web Services</p>
+              </div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-item__year">Cert</div>
+              <div class="edu-item__body">
+                <h4>Power BI Data Analyst</h4>
+                <p>Microsoft</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section class="section section--dark" id="stack">
+    <div class="container">
+      <p class="section-eyebrow center">// tecnologias</p>
+      <h2 class="section-title center">Stack &amp; Ferramentas</h2>
+      <div class="stack__grid">
+        <div class="stack-group">
+          <h3 class="stack-group__label">Data Science</h3>
+          <div class="stack-items">
+            <div class="stack-item"><span class="stack-icon">🐍</span>Python</div>
+            <div class="stack-item"><span class="stack-icon">📊</span>Pandas</div>
+            <div class="stack-item"><span class="stack-icon">🤖</span>Scikit-learn</div>
+            <div class="stack-item"><span class="stack-icon">🔥</span>PySpark</div>
+            <div class="stack-item"><span class="stack-icon">📈</span>Statsmodels</div>
+          </div>
+        </div>
+        <div class="stack-group">
+          <h3 class="stack-group__label">Business Intelligence</h3>
+          <div class="stack-items">
+            <div class="stack-item"><span class="stack-icon">📋</span>Power BI</div>
+            <div class="stack-item"><span class="stack-icon">🗃️</span>SQL Server</div>
+            <div class="stack-item"><span class="stack-icon">🐘</span>PostgreSQL</div>
+            <div class="stack-item"><span class="stack-icon">📑</span>DAX</div>
+            <div class="stack-item"><span class="stack-icon">🔄</span>ETL/SSIS</div>
+          </div>
+        </div>
+        <div class="stack-group">
+          <h3 class="stack-group__label">Cloud &amp; Engenharia</h3>
+          <div class="stack-items">
+            <div class="stack-item"><span class="stack-icon">☁️</span>AWS</div>
+            <div class="stack-item"><span class="stack-icon">🪣</span>S3 / Redshift</div>
+            <div class="stack-item"><span class="stack-icon">🐳</span>Docker</div>
+            <div class="stack-item"><span class="stack-icon">🌊</span>Airflow</div>
+            <div class="stack-item"><span class="stack-icon">🔗</span>dbt</div>
+          </div>
+        </div>
+        <div class="stack-group">
+          <h3 class="stack-group__label">Desenvolvimento</h3>
+          <div class="stack-items">
+            <div class="stack-item"><span class="stack-icon">⚡</span>JavaScript</div>
+            <div class="stack-item"><span class="stack-icon">🔷</span>TypeScript</div>
+            <div class="stack-item"><span class="stack-icon">⚛️</span>React</div>
+            <div class="stack-item"><span class="stack-icon">🟢</span>Node.js</div>
+            <div class="stack-item"><span class="stack-icon">🐙</span>Git / GitHub</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section class="section" id="projetos">
+    <div class="container">
+      <p class="section-eyebrow center">// portfólio</p>
+      <h2 class="section-title center">Projetos Selecionados</h2>
+      <div class="projects__grid">
+
+        <article class="project-card project-card--featured">
+          <div class="project-card__header">
+            <span class="project-card__type">Data Science · ML</span>
+            <div class="project-card__links">
+              <a href="#" aria-label="GitHub" class="project-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="#" aria-label="Demo" class="project-link">↗</a>
+            </div>
+          </div>
+          <h3 class="project-card__title">Modelo Preditivo de Churn para Multinacional</h3>
+          <p class="project-card__desc">Pipeline end-to-end de ML para predição de churn de clientes em mercados LATAM. Reduziu a taxa de cancelamento em 18% via ações proativas baseadas no score de risco.</p>
+          <div class="project-card__tech">
+            <span>Python</span><span>XGBoost</span><span>AWS SageMaker</span><span>Airflow</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__header">
+            <span class="project-card__type">Business Intelligence</span>
+            <div class="project-card__links">
+              <a href="#" aria-label="GitHub" class="project-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="#" aria-label="Demo" class="project-link">↗</a>
+            </div>
+          </div>
+          <h3 class="project-card__title">Dashboard Executivo de KPIs Globais</h3>
+          <p class="project-card__desc">Suite de dashboards em Power BI conectados a Data Warehouse no Azure Synapse, consolidando dados de 5 países para o C-Level.</p>
+          <div class="project-card__tech">
+            <span>Power BI</span><span>DAX</span><span>Azure Synapse</span><span>SQL</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__header">
+            <span class="project-card__type">Desenvolvimento · Data</span>
+            <div class="project-card__links">
+              <a href="#" aria-label="GitHub" class="project-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="#" aria-label="Demo" class="project-link">↗</a>
+            </div>
+          </div>
+          <h3 class="project-card__title">API de Análise Preditiva de Vendas</h3>
+          <p class="project-card__desc">REST API em FastAPI com modelo de forecasting de séries temporais, integrada a sistemas ERP via webhooks. Utilizada por equipes comerciais de 3 regiões.</p>
+          <div class="project-card__tech">
+            <span>FastAPI</span><span>Prophet</span><span>PostgreSQL</span><span>Docker</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__header">
+            <span class="project-card__type">Engenharia de Dados</span>
+            <div class="project-card__links">
+              <a href="#" aria-label="GitHub" class="project-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-card__title">Pipeline de Dados em Tempo Real</h3>
+          <p class="project-card__desc">Arquitetura de streaming com Kafka + Spark Structured Streaming para processamento de eventos de e-commerce, alimentando alertas em tempo real para operações.</p>
+          <div class="project-card__tech">
+            <span>Kafka</span><span>PySpark</span><span>Airflow</span><span>AWS</span>
+          </div>
+        </article>
+
+      </div>
+      <div class="projects__more">
+        <a href="https://github.com/seuusuario" class="btn btn--ghost" target="_blank">Ver todos no GitHub ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIÊNCIA -->
+  <section class="section section--dark" id="experiencia">
+    <div class="container">
+      <p class="section-eyebrow">// trajetória</p>
+      <h2 class="section-title">Experiência Profissional</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-item__meta">
+            <span class="timeline-item__date">2022 — atual</span>
+            <span class="timeline-item__location">🌎 Remote / Global</span>
+          </div>
+          <div class="timeline-item__body">
+            <div class="timeline-item__dot"></div>
+            <h3 class="timeline-item__role">Senior Data Scientist</h3>
+            <p class="timeline-item__company">Nome da Multinacional</p>
+            <p class="timeline-item__desc">Liderança técnica de projetos de ciência de dados em escala global. Desenvolvimento de modelos de ML para otimização de receita, segmentação de clientes e predição de demanda. Atuação direta com equipes em EUA, Europa e LATAM.</p>
+            <ul class="timeline-item__highlights">
+              <li>Redução de 18% no churn via modelo preditivo</li>
+              <li>Pipeline de dados processando +2M eventos/dia</li>
+              <li>Mentoria de equipe com 4 analistas júnior</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-item__meta">
+            <span class="timeline-item__date">2020 — 2022</span>
+            <span class="timeline-item__location">🇧🇷 São Paulo, BR</span>
+          </div>
+          <div class="timeline-item__body">
+            <div class="timeline-item__dot"></div>
+            <h3 class="timeline-item__role">BI Developer & Data Analyst</h3>
+            <p class="timeline-item__company">Nome da Empresa</p>
+            <p class="timeline-item__desc">Criação e manutenção de dashboards executivos, modelagem dimensional e construção de ETLs para integração de dados entre sistemas ERP, CRM e plataformas de marketing.</p>
+            <ul class="timeline-item__highlights">
+              <li>Suite de 12 dashboards Power BI para board diretivo</li>
+              <li>DW modelado em Kimball com +50 tabelas fato/dimensão</li>
+              <li>Automação de relatórios que economizou 40h/mês</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-item__meta">
+            <span class="timeline-item__date">2018 — 2020</span>
+            <span class="timeline-item__location">🇧🇷 São Paulo, BR</span>
+          </div>
+          <div class="timeline-item__body">
+            <div class="timeline-item__dot"></div>
+            <h3 class="timeline-item__role">Desenvolvedor Full Stack Jr.</h3>
+            <p class="timeline-item__company">Nome da Empresa</p>
+            <p class="timeline-item__desc">Desenvolvimento de aplicações web com React e Node.js, integração de APIs e participação em metodologias ágeis (Scrum). Base sólida em engenharia de software que complementa a atuação em dados.</p>
+            <ul class="timeline-item__highlights">
+              <li>3 produtos lançados em produção</li>
+              <li>Integração com APIs de pagamento e logística</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="section" id="contato">
+    <div class="container">
+      <div class="contact__inner">
+        <p class="section-eyebrow center">// contato</p>
+        <h2 class="section-title center">Vamos conversar?</h2>
+        <p class="contact__subtitle">Estou aberto a novas oportunidades, colaborações e projetos desafiadores. Manda uma mensagem.</p>
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nome</label>
+              <input type="text" id="name" name="name" placeholder="Seu nome" required />
+              <span class="form-error" id="name-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+              <span class="form-error" id="email-error"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Assunto</label>
+            <input type="text" id="subject" name="subject" placeholder="Sobre o que você quer falar?" />
+          </div>
+          <div class="form-group">
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" rows="5" placeholder="Conte mais sobre o projeto ou oportunidade..." required></textarea>
+            <span class="form-error" id="message-error"></span>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full" id="submit-btn">
+            <span class="btn-text">Enviar Mensagem</span>
+            <span class="btn-loading" hidden>Enviando...</span>
+          </button>
+          <div class="form-success" id="form-success" hidden>
+            ✓ Mensagem enviada! Retornarei em breve.
+          </div>
+        </form>
+        <div class="contact__social">
+          <a href="https://linkedin.com/in/seuperfil" target="_blank" class="social-link">LinkedIn</a>
+          <span class="social-sep">·</span>
+          <a href="https://github.com/seuusuario" target="_blank" class="social-link">GitHub</a>
+          <span class="social-sep">·</span>
+          <a href="mailto:seu@email.com" class="social-link">Email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>Feito com <span class="heart">♥</span> por <strong>Seu Nome</strong> · <span id="footer-year"></span></p>
+      <a href="#hero" class="back-to-top">↑ Voltar ao topo</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
