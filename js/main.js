@@ -268,3 +268,86 @@ function loadPBI(containerId, inputId) {
 document.addEventListener('DOMContentLoaded', () => {
   Object.keys(PBI_REPORTS).forEach(id => loadPBI(id, null));
 });
+
+/* ===========================
+   CONTACT FORM — FORMSPREE
+   =========================== */
+   const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xbdeeqwk';
+
+   const form = document.getElementById('contact-form');
+   const submitBtn = document.getElementById('submit-btn');
+   const formSuccess = document.getElementById('form-success');
+   const formFail = document.getElementById('form-fail');
+   
+   function showError(fieldId, msg) {
+     const input = document.getElementById(fieldId);
+     const errorEl = document.getElementById(`${fieldId}-error`);
+     if (input) input.classList.add('error');
+     if (errorEl) errorEl.textContent = msg;
+   }
+   
+   function clearErrors() {
+     form.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
+     form.querySelectorAll('.form-error').forEach(el => el.textContent = '');
+     formSuccess.hidden = true;
+     formFail.hidden = true;
+   }
+   
+   function validateEmail(email) {
+     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+   }
+   
+   if (form) {
+     form.addEventListener('submit', async (e) => {
+       e.preventDefault();
+       clearErrors();
+   
+       const name = document.getElementById('name').value.trim();
+       const email = document.getElementById('email').value.trim();
+       const subject = document.getElementById('subject').value.trim();
+       const message = document.getElementById('message').value.trim();
+   
+       let valid = true;
+   
+       if (!name) {
+         showError('name', 'Por favor, informe seu nome.');
+         valid = false;
+       }
+       if (!email || !validateEmail(email)) {
+         showError('email', 'Informe um e-mail válido.');
+         valid = false;
+       }
+       if (!message) {
+         showError('message', 'A mensagem não pode estar vazia.');
+         valid = false;
+       }
+   
+       if (!valid) return;
+   
+       submitBtn.querySelector('.btn-text').hidden = true;
+       submitBtn.querySelector('.btn-loading').hidden = false;
+       submitBtn.disabled = true;
+   
+       try {
+         const response = await fetch(FORMSPREE_ENDPOINT, {
+           method: 'POST',
+           headers: { 'Accept': 'application/json' },
+           body: new FormData(form),
+         });
+   
+         if (response.ok) {
+           form.reset();
+           formSuccess.hidden = false;
+           setTimeout(() => { formSuccess.hidden = true; }, 6000);
+         } else {
+           formFail.hidden = false;
+         }
+       } catch (err) {
+         formFail.hidden = false;
+       }
+   
+       submitBtn.querySelector('.btn-text').hidden = false;
+       submitBtn.querySelector('.btn-loading').hidden = true;
+       submitBtn.disabled = false;
+     });
+   }
