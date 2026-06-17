@@ -148,128 +148,6 @@ const fadeObserver = new IntersectionObserver(entries => {
 fadeElements.forEach(el => fadeObserver.observe(el));
 
 /* ===========================
-   CONTACT FORM
-   =========================== */
-const form = document.getElementById('contact-form');
-const submitBtn = document.getElementById('submit-btn');
-const formSuccess = document.getElementById('form-success');
-
-function showError(fieldId, msg) {
-  const input = document.getElementById(fieldId);
-  const errorEl = document.getElementById(`${fieldId}-error`);
-  if (input) input.classList.add('error');
-  if (errorEl) errorEl.textContent = msg;
-}
-
-function clearErrors() {
-  form.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
-  form.querySelectorAll('.form-error').forEach(el => el.textContent = '');
-}
-
-function validateEmail(email) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
-
-if (form) {
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    clearErrors();
-
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-
-    let valid = true;
-
-    if (!name) {
-      showError('name', 'Por favor, informe seu nome.');
-      valid = false;
-    }
-    if (!email || !validateEmail(email)) {
-      showError('email', 'Informe um e-mail válido.');
-      valid = false;
-    }
-    if (!message) {
-      showError('message', 'A mensagem não pode estar vazia.');
-      valid = false;
-    }
-
-    if (!valid) return;
-
-    submitBtn.querySelector('.btn-text').hidden = true;
-    submitBtn.querySelector('.btn-loading').hidden = false;
-    submitBtn.disabled = true;
-
-    // Simulate submission — replace with your backend/Formspree endpoint
-    await new Promise(r => setTimeout(r, 1500));
-
-  
-    form.reset();
-    submitBtn.querySelector('.btn-text').hidden = false;
-    submitBtn.querySelector('.btn-loading').hidden = true;
-    submitBtn.disabled = false;
-    formSuccess.hidden = false;
-
-    setTimeout(() => { formSuccess.hidden = true; }, 6000);
-  });
-}
-
-/* ===========================
-   FOOTER YEAR
-   =========================== */
-const yearEl = document.getElementById('footer-year');
-if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-/* ===========================
-   ACTIVE NAV LINK (scroll spy)
-   =========================== */
-const sections = document.querySelectorAll('section[id]');
-const navAnchors = document.querySelectorAll('.nav__links a[href^="#"]');
-
-const spyObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      navAnchors.forEach(a => {
-        a.style.color = '';
-        if (a.getAttribute('href') === `#${entry.target.id}`) {
-          a.style.color = 'var(--cyan)';
-        }
-      });
-    }
-  });
-}, { threshold: 0.4 });
-
-sections.forEach(s => spyObserver.observe(s));
-
-
-  /* ===========================
-   POWER BI EMBED LOADER
-   =========================== */
-const PBI_REPORTS = {
-  'pbi-batch':   'https://app.powerbi.com/view?r=eyJrIjoiMTM0ODZiNWYtODUzYy00ODc5LTk2MzQtOGE0NTU2MjllNzNkIiwidCI6IjRjMzMwMTc0LWI0NjMtNDAwYy1hODRiLWVlM2M2YjcwNWM2MiJ9&pageName=ac03fc22a83a16d459eaCOLE_AQUI_O_LINK_DO_BATCH_TRACKING',
-  'pbi-alarmes': 'https://app.powerbi.com/view?r=eyJrIjoiZDRlYTM1ZGUtMGI5NS00ZjdmLTllOTItN2I1Y2I4ZDQzNjMyIiwidCI6IjRjMzMwMTc0LWI0NjMtNDAwYy1hODRiLWVlM2M2YjcwNWM2MiJ9',
-};
-
-function loadPBI(containerId, inputId) {
-  const input = document.getElementById(inputId);
-  const url = (input ? input.value.trim() : '') || PBI_REPORTS[containerId];
-  const container = document.getElementById(containerId);
-
-  if (!url || !url.includes('powerbi.com')) {
-    if (input) input.style.borderColor = '#e53e3e';
-    return;
-  }
-
-  container.classList.add('pbi-placeholder--loaded');
-  container.innerHTML = `<iframe src="${url}" allowFullScreen="true"></iframe>`;
-}
-
-// Carrega automaticamente ao abrir o site
-document.addEventListener('DOMContentLoaded', () => {
-  Object.keys(PBI_REPORTS).forEach(id => loadPBI(id, null));
-});
-
-/* ===========================
    CONTACT FORM — FORMSPREE
    =========================== */
    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xbdeeqwk';
@@ -351,3 +229,59 @@ document.addEventListener('DOMContentLoaded', () => {
        submitBtn.disabled = false;
      });
    }
+
+/* ===========================
+   FOOTER YEAR
+   =========================== */
+const yearEl = document.getElementById('footer-year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+/* ===========================
+   ACTIVE NAV LINK (scroll spy)
+   =========================== */
+const sections = document.querySelectorAll('section[id]');
+const navAnchors = document.querySelectorAll('.nav__links a[href^="#"]');
+
+const spyObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navAnchors.forEach(a => {
+        a.style.color = '';
+        if (a.getAttribute('href') === `#${entry.target.id}`) {
+          a.style.color = 'var(--cyan)';
+        }
+      });
+    }
+  });
+}, { threshold: 0.4 });
+
+sections.forEach(s => spyObserver.observe(s));
+
+
+  /* ===========================
+   POWER BI EMBED LOADER
+   =========================== */
+const PBI_REPORTS = {
+  'pbi-batch':   'https://app.powerbi.com/view?r=eyJrIjoiMTM0ODZiNWYtODUzYy00ODc5LTk2MzQtOGE0NTU2MjllNzNkIiwidCI6IjRjMzMwMTc0LWI0NjMtNDAwYy1hODRiLWVlM2M2YjcwNWM2MiJ9&pageName=ac03fc22a83a16d459eaCOLE_AQUI_O_LINK_DO_BATCH_TRACKING',
+  'pbi-alarmes': 'https://app.powerbi.com/view?r=eyJrIjoiZDRlYTM1ZGUtMGI5NS00ZjdmLTllOTItN2I1Y2I4ZDQzNjMyIiwidCI6IjRjMzMwMTc0LWI0NjMtNDAwYy1hODRiLWVlM2M2YjcwNWM2MiJ9',
+};
+
+function loadPBI(containerId, inputId) {
+  const input = document.getElementById(inputId);
+  const url = (input ? input.value.trim() : '') || PBI_REPORTS[containerId];
+  const container = document.getElementById(containerId);
+
+  if (!url || !url.includes('powerbi.com')) {
+    if (input) input.style.borderColor = '#e53e3e';
+    return;
+  }
+
+  container.classList.add('pbi-placeholder--loaded');
+  container.innerHTML = `<iframe src="${url}" allowFullScreen="true"></iframe>`;
+}
+
+// Carrega automaticamente ao abrir o site
+document.addEventListener('DOMContentLoaded', () => {
+  Object.keys(PBI_REPORTS).forEach(id => loadPBI(id, null));
+});
+
