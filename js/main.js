@@ -203,14 +203,7 @@ if (form) {
     // Simulate submission — replace with your backend/Formspree endpoint
     await new Promise(r => setTimeout(r, 1500));
 
-    // ---- OPTION A: Formspree (recommended for GitHub Pages) ----
-    // const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify({ name, email, message }),
-    // });
-    // if (response.ok) { ... }
-
+  
     form.reset();
     submitBtn.querySelector('.btn-text').hidden = false;
     submitBtn.querySelector('.btn-loading').hidden = true;
