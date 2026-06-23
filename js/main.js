@@ -262,7 +262,7 @@ sections.forEach(s => spyObserver.observe(s));
    POWER BI EMBED LOADER
    =========================== */
 const PBI_REPORTS = {
-  'pbi-batch':   'https://app.powerbi.com/view?r=eyJrIjoiMTM0ODZiNWYtODUzYy00ODc5LTk2MzQtOGE0NTU2MjllNzNkIiwidCI6IjRjMzMwMTc0LWI0NjMtNDAwYy1hODRiLWVlM2M2YjcwNWM2MiJ9&pageName=ac03fc22a83a16d459eaCOLE_AQUI_O_LINK_DO_BATCH_TRACKING',
+  'pbi-batch':   'https://app.powerbi.com/view?r=eyJrIjoiMTM0ODZiNWYtODUzYy00ODc5LTk2MzQtOGE0NTU2MjllNzNkIiwidCI6IjRjMzMwMTc0LWI0NjMtNDAwYy1hODRiLWVlM2M2YjcwNWM2MiJ9&pageName=ac03fc22a83a16d459ea',
   'pbi-alarmes': 'https://app.powerbi.com/view?r=eyJrIjoiZDRlYTM1ZGUtMGI5NS00ZjdmLTllOTItN2I1Y2I4ZDQzNjMyIiwidCI6IjRjMzMwMTc0LWI0NjMtNDAwYy1hODRiLWVlM2M2YjcwNWM2MiJ9',
 };
 
