@@ -129,7 +129,7 @@ if (heroMetrics) counterObserver.observe(heroMetrics);
    SCROLL FADE-IN
    =========================== */
 const fadeElements = document.querySelectorAll(
-  '.sobre__text, .sobre__education, .stack-group, .project-card, .timeline-item, .contact__inner'
+  '.pain-card, .solution__text, .solution__visual, .method-step, .project-card, .sobre__text, .sobre__photo, .contact__inner'
 );
 
 fadeElements.forEach(el => el.classList.add('fade-in-up'));
@@ -150,85 +150,110 @@ fadeElements.forEach(el => fadeObserver.observe(el));
 /* ===========================
    CONTACT FORM — FORMSPREE
    =========================== */
-   const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xbdeeqwk';
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xbdeeqwk';
 
-   const form = document.getElementById('contact-form');
-   const submitBtn = document.getElementById('submit-btn');
-   const formSuccess = document.getElementById('form-success');
-   const formFail = document.getElementById('form-fail');
-   
-   function showError(fieldId, msg) {
-     const input = document.getElementById(fieldId);
-     const errorEl = document.getElementById(`${fieldId}-error`);
-     if (input) input.classList.add('error');
-     if (errorEl) errorEl.textContent = msg;
-   }
-   
-   function clearErrors() {
-     form.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
-     form.querySelectorAll('.form-error').forEach(el => el.textContent = '');
-     formSuccess.hidden = true;
-     formFail.hidden = true;
-   }
-   
-   function validateEmail(email) {
-     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-   }
-   
-   if (form) {
-     form.addEventListener('submit', async (e) => {
-       e.preventDefault();
-       clearErrors();
-   
-       const name = document.getElementById('name').value.trim();
-       const email = document.getElementById('email').value.trim();
-       const subject = document.getElementById('subject').value.trim();
-       const message = document.getElementById('message').value.trim();
-   
-       let valid = true;
-   
-       if (!name) {
-         showError('name', 'Por favor, informe seu nome.');
-         valid = false;
-       }
-       if (!email || !validateEmail(email)) {
-         showError('email', 'Informe um e-mail válido.');
-         valid = false;
-       }
-       if (!message) {
-         showError('message', 'A mensagem não pode estar vazia.');
-         valid = false;
-       }
-   
-       if (!valid) return;
-   
-       submitBtn.querySelector('.btn-text').hidden = true;
-       submitBtn.querySelector('.btn-loading').hidden = false;
-       submitBtn.disabled = true;
-   
-       try {
-         const response = await fetch(FORMSPREE_ENDPOINT, {
-           method: 'POST',
-           headers: { 'Accept': 'application/json' },
-           body: new FormData(form),
-         });
-   
-         if (response.ok) {
-           form.reset();
-           formSuccess.hidden = false;
-           setTimeout(() => { formSuccess.hidden = true; }, 6000);
-         } else {
-           formFail.hidden = false;
-         }
-       } catch (err) {
-         formFail.hidden = false;
-       }
-   
-       submitBtn.querySelector('.btn-text').hidden = false;
-       submitBtn.querySelector('.btn-loading').hidden = true;
-       submitBtn.disabled = false;
-     });
-   }
+const form = document.getElementById('contact-form');
+const submitBtn = document.getElementById('submit-btn');
+const formSuccess = document.getElementById('form-success');
+const formFail = document.getElementById('form-fail');
+
+function showError(fieldId, msg) {
+  const input = document.getElementById(fieldId);
+  const errorEl = document.getElementById(`${fieldId}-error`);
+  if (input) input.classList.add('error');
+  if (errorEl) errorEl.textContent = msg;
+}
+
+function clearErrors() {
+  form.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
+  form.querySelectorAll('.form-error').forEach(el => el.textContent = '');
+  formSuccess.hidden = true;
+  formFail.hidden = true;
+}
+
+function validateEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+if (form) {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    clearErrors();
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    let valid = true;
+
+    if (!name) {
+      showError('name', 'Por favor, informe seu nome.');
+      valid = false;
+    }
+    if (!email || !validateEmail(email)) {
+      showError('email', 'Informe um e-mail válido.');
+      valid = false;
+    }
+    if (!message) {
+      showError('message', 'A mensagem não pode estar vazia.');
+      valid = false;
+    }
+
+    if (!valid) return;
+
+    submitBtn.querySelector('.btn-text').hidden = true;
+    submitBtn.querySelector('.btn-loading').hidden = false;
+    submitBtn.disabled = true;
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form),
+      });
+
+      if (response.ok) {
+        form.reset();
+        formSuccess.hidden = false;
+        setTimeout(() => { formSuccess.hidden = true; }, 6000);
+      } else {
+        formFail.hidden = false;
+      }
+    } catch (err) {
+      formFail.hidden = false;
+    }
+
+    submitBtn.querySelector('.btn-text').hidden = false;
+    submitBtn.querySelector('.btn-loading').hidden = true;
+    submitBtn.disabled = false;
+  });
+}
+
+/* ===========================
+   POWER BI EMBED LOADER
+   =========================== */
+const PBI_REPORTS = {
+  'pbi-alarmes': 'https://app.powerbi.com/view?r=eyJrIjoiZDRlYTM1ZGUtMGI5NS00ZjdmLTllOTItN2I1Y2I4ZDQzNjMyIiwidCI6IjRjMzMwMTc0LWI0NjMtNDAwYy1hODRiLWVlM2M2YjcwNWM2MiJ9',
+  'pbi-batch':'https://app.powerbi.com/view?r=eyJrIjoiMTM0ODZiNWYtODUzYy00ODc5LTk2MzQtOGE0NTU2MjllNzNkIiwidCI6IjRjMzMwMTc0LWI0NjMtNDAwYy1hODRiLWVlM2M2YjcwNWM2MiJ9&pageName=ac03fc22a83a16d459ea'
+};
+
+function loadPBI(containerId, inputId) {
+  const input = document.getElementById(inputId);
+  const url = (input ? input.value.trim() : '') || PBI_REPORTS[containerId];
+  const container = document.getElementById(containerId);
+
+  if (!url || !url.includes('powerbi.com')) {
+    if (input) input.style.borderColor = '#e53e3e';
+    return;
+  }
+
+  container.classList.add('pbi-placeholder--loaded');
+  container.innerHTML = `<iframe src="${url}" allowFullScreen="true"></iframe>`;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  Object.keys(PBI_REPORTS).forEach(id => loadPBI(id, null));
+});
 
 /* ===========================
    FOOTER YEAR
@@ -256,32 +281,3 @@ const spyObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.4 });
 
 sections.forEach(s => spyObserver.observe(s));
-
-
-  /* ===========================
-   POWER BI EMBED LOADER
-   =========================== */
-const PBI_REPORTS = {
-  'pbi-batch':   'https://app.powerbi.com/view?r=eyJrIjoiMTM0ODZiNWYtODUzYy00ODc5LTk2MzQtOGE0NTU2MjllNzNkIiwidCI6IjRjMzMwMTc0LWI0NjMtNDAwYy1hODRiLWVlM2M2YjcwNWM2MiJ9&pageName=ac03fc22a83a16d459ea',
-  'pbi-alarmes': 'https://app.powerbi.com/view?r=eyJrIjoiZDRlYTM1ZGUtMGI5NS00ZjdmLTllOTItN2I1Y2I4ZDQzNjMyIiwidCI6IjRjMzMwMTc0LWI0NjMtNDAwYy1hODRiLWVlM2M2YjcwNWM2MiJ9',
-};
-
-function loadPBI(containerId, inputId) {
-  const input = document.getElementById(inputId);
-  const url = (input ? input.value.trim() : '') || PBI_REPORTS[containerId];
-  const container = document.getElementById(containerId);
-
-  if (!url || !url.includes('powerbi.com')) {
-    if (input) input.style.borderColor = '#e53e3e';
-    return;
-  }
-
-  container.classList.add('pbi-placeholder--loaded');
-  container.innerHTML = `<iframe src="${url}" allowFullScreen="true"></iframe>`;
-}
-
-// Carrega automaticamente ao abrir o site
-document.addEventListener('DOMContentLoaded', () => {
-  Object.keys(PBI_REPORTS).forEach(id => loadPBI(id, null));
-});
-

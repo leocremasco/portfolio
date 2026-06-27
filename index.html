@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Leonardo Cremasco · Data Scientist & BI Developer</title>
-  <meta name="description" content="Data Scientist e Business Intelligence Developer com experiência em multinacionais. Portfólio de projetos em Python, SQL, Power BI e ML." />
+  <title>Leonardo Cremasco · Dados Industriais que Geram Resultado</title>
+  <meta name="description" content="Consultoria em Data Analytics, PI System e IoT Industrial. Transformo dados de planta em decisões que reduzem custo, evitam falhas e aumentam produtividade." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -20,11 +20,11 @@
       <span class="logo-bracket">}</span>
     </div>
     <ul class="nav__links">
+      <li><a href="#solucao">Solução</a></li>
+      <li><a href="#metodo">Método</a></li>
+      <li><a href="#cases">Cases</a></li>
       <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#stack">Stack</a></li>
-      <li><a href="#projetos">Projetos</a></li>
-      <li><a href="#experiencia">Experiência</a></li>
-      <li><a href="#contato" class="nav__cta">Contato</a></li>
+      <li><a href="#contato" class="nav__cta">Fale Comigo</a></li>
     </ul>
     <button class="nav__burger" aria-label="Menu" id="burger">
       <span></span><span></span><span></span>
@@ -35,30 +35,27 @@
   <section class="hero" id="hero">
     <canvas id="particle-canvas"></canvas>
     <div class="hero__content">
-      <p class="hero__eyebrow">Data Scientist · BI Developer · PI System Expert</p>
-      <div class="hero__name-row">
-        <h1 class="hero__name">Leonardo Cremasco<span class="hero__cursor">_</span></h1>
-        <div class="hero__avatar">
-          <img src="assets/img/profile.jpeg" alt="Leonardo Cremasco" />
-        </div>
-      </div>
-      <p class="hero__tagline">Transformo dados industriais em decisões.<br/>De historiadores PI a dashboards executivos — em escala multinacional.</p>
+      <p class="hero__eyebrow">Consultoria em Data Analytics & PI System para Indústria</p>
+      <h1 class="hero__name">Seus dados de planta já existem.<br/>O que falta é transformá-los em <span class="hero__highlight">decisão.</span></h1>
+      <p class="hero__tagline">
+        Sou Leonardo Cremasco. Ajudo indústrias a estruturar a gestão de dados operacionais — de sensores e historiadores a dashboards executivos — para reduzir custo, evitar falhas e antecipar problemas antes que eles aconteçam.
+      </p>
       <div class="hero__actions">
-        <a href="#projetos" class="btn btn--primary">Ver Projetos</a>
-        <a href="#contato" class="btn btn--ghost">Fale Comigo</a>
+        <a href="#contato" class="btn btn--primary">Agendar Conversa</a>
+        <a href="#cases" class="btn btn--ghost">Ver Cases Reais</a>
       </div>
       <div class="hero__metrics">
         <div class="metric">
-          <span class="metric__number" data-target="3">0</span><span class="metric__unit">+</span>
-          <span class="metric__label">Anos de Experiência</span>
-        </div>
-        <div class="metric">
           <span class="metric__number" data-target="15">0</span><span class="metric__unit">+</span>
-          <span class="metric__label">Projetos Entregues</span>
+          <span class="metric__label">Áreas Industriais Integradas</span>
         </div>
         <div class="metric">
-          <span class="metric__number" data-target="3">0</span><span class="metric__unit"></span>
-          <span class="metric__label">Países de Atuação</span>
+          <span class="metric__number" data-target="2">0</span><span class="metric__unit"></span>
+          <span class="metric__label">Plantas Multinacionais</span>
+        </div>
+        <div class="metric">
+          <span class="metric__number" data-target="5">0</span><span class="metric__unit">+</span>
+          <span class="metric__label">Anos em Ambiente Industrial</span>
         </div>
       </div>
     </div>
@@ -68,308 +65,258 @@
     </div>
   </section>
 
-  <!-- SOBRE -->
-  <section class="section" id="sobre">
+  <!-- DOR / PROBLEMA -->
+  <section class="section pain" id="dor">
     <div class="container">
-      <div class="sobre__grid">
-        <div class="sobre__text">
-          <p class="section-eyebrow">// sobre mim</p>
-          <h2 class="section-title">Dados são a <em>linguagem</em> do negócio</h2>
-          <p class="sobre__bio">
-            Sou analista e cientista de dados especializado no ecossistema <strong>PI System (AVEVA)</strong> e em soluções de <strong>IoT industrial</strong>, atuando em plantas de multinacionais onde dados de chão de fábrica se transformam em decisões estratégicas de produção, qualidade e segurança de processos.
+      <p class="section-eyebrow center">// o cenário comum</p>
+      <h2 class="section-title center">A indústria gera dados <em>o tempo todo</em>.<br/>O problema é o que acontece <em>depois</em>.</h2>
+      <div class="pain__grid">
+        <div class="pain-card">
+          <span class="pain-card__icon">⚠️</span>
+          <h3>Dados espalhados e sem padrão</h3>
+          <p>Historiadores, ERPs e planilhas que não se conversam. Cada área com sua própria versão da "verdade".</p>
+        </div>
+        <div class="pain-card">
+          <span class="pain-card__icon">⏱️</span>
+          <h3>Decisão tardia</h3>
+          <p>Falhas e desvios só são identificados depois que já geraram retrabalho, parada de linha ou perda de produto.</p>
+        </div>
+        <div class="pain-card">
+          <span class="pain-card__icon">🧩</span>
+          <h3>Sistemas que não conversam</h3>
+          <p>PI System, SAP, bancos SQL e sensores de campo isolados — sem uma camada que una tudo isso em insight acionável.</p>
+        </div>
+        <div class="pain-card">
+          <span class="pain-card__icon">📉</span>
+          <h3>BI sem inteligência</h3>
+          <p>Dashboards bonitos que mostram o passado, mas não ajudam a prever o que vai acontecer ou o que fazer a respeito.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUÇÃO -->
+  <section class="section section--dark" id="solucao">
+    <div class="container">
+      <div class="solution__grid">
+        <div class="solution__text">
+          <p class="section-eyebrow">// a solução</p>
+          <h2 class="section-title">Da planta ao painel de decisão. <em>Uma cadeia só.</em></h2>
+          <p class="solution__lead">
+            Estruturo a gestão de dados industriais de ponta a ponta — desde a captura na origem (sensores, OPC, historiadores) até dashboards e modelos preditivos que sua equipe realmente usa para decidir.
           </p>
-          <p class="sobre__bio">
-            Minha atuação cobre toda a cadeia de valor do dado: da conexão entre redes <strong>TA e TI</strong>, configuração de interfaces e historiadores, até a modelagem de ativos em PI AF e a entrega de dashboards executivos em Power BI. Um elo raro entre engenharia industrial e analytics que une profundidade técnica operacional à visão estratégica do negócio.
-          </p>
-          <p class="sobre__bio">
-            Essa experiência foi construída em ambientes corporativos de alto impacto — incluindo operações multinacionais — onde a confiabilidade dos dados industriais é condição essencial para decisões que afetam produção, qualidade e segurança em escala.
-          </p>
-          </p>
-          <div class="sobre__tags">
-            <span class="tag">Machine Learning</span>
-            <span class="tag">ETL &amp; Data Pipelines</span>
-            <span class="tag">Dashboards Executivos</span>
-            <span class="tag">Análise Estatística</span>
-            <span class="tag">PI System (AVEVA)</span>
-            <span class="tag">IoT Industrial</span>
-            <span class="tag">Ambiente Multinacional</span>
+          <div class="solution__pillars">
+            <div class="pillar">
+              <span class="pillar__number">01</span>
+              <div>
+                <h4>Infraestrutura de Dados Confiável</h4>
+                <p>PI System, OPC e integrações TA/TI estruturadas para captar dado correto, na hora certa, sem ruído.</p>
+              </div>
+            </div>
+            <div class="pillar">
+              <span class="pillar__number">02</span>
+              <div>
+                <h4>Visibilidade em Tempo Real</h4>
+                <p>Dashboards executivos e operacionais que mostram o que está acontecendo agora — não só o relatório de ontem.</p>
+              </div>
+            </div>
+            <div class="pillar">
+              <span class="pillar__number">03</span>
+              <div>
+                <h4>Analytics Preditivo</h4>
+                <p>Modelos que identificam padrões de falha, desvio de qualidade e oportunidades de economia antes que se tornem problema.</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="sobre__education">
-          <p class="section-eyebrow">// formação</p>
-          <div class="education-list">
-            <div class="edu-item">
-              <div class="edu-item__year">2023 - atual</div>
-              <div class="edu-item__body">
-                <h4>Bacharelado em Engenharia da Computação - 7º Semestre</h4>
-                <p>EEP - Escola de Engenharia de Piracicaba</p>
-              </div>
+        <div class="solution__visual">
+          <div class="flow-diagram">
+            <div class="flow-node flow-node--source">
+              <span class="flow-node__label">Sensores / OPC / PI Tags</span>
             </div>
-
-            <div class="edu-item">
-              <div class="edu-item__year">Cert</div>
-              <div class="edu-item__body">
-                <h4>Certificado de Proficiência e Fluência em Língua Inglesa – CEFR Nível B2 </h4>
-                <p>University of Cambridge</p>
-              </div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-node flow-node--process">
+              <span class="flow-node__label">PI AF · Event Frames · ETL</span>
             </div>
-
-            <div class="edu-item">
-              <div class="edu-item__year">Cert</div>
-              <div class="edu-item__body">
-                <h4>Especialização em Power BI: ETL, DAX, Modelação de Dados e Dashbords Executivos</h4>
-                <p>Dados Criativos</p>
-              </div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-node flow-node--bi">
+              <span class="flow-node__label">Power BI · Dataflows</span>
             </div>
-
-              <div class="edu-item">
-                <div class="edu-item__year">Cert</div>
-                <div class="edu-item__body">
-                  <h4>Advanced Visualizations & Dashboards: Visualization Using Python</h4>
-                  <p>SkillSoft</p>
-                </div>
-              </div>
-            
-            <div class="edu-item">
-              <div class="edu-item__year">Cert</div>
-              <div class="edu-item__body">
-                <h4>Curso de Version Control: Git & Github</h4>
-                <p>Curso em Vídeo</p>
-              </div>
-          </div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-node flow-node--decision">
+              <span class="flow-node__label">Decisão Estratégica</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- STACK -->
-  <section class="section section--dark" id="stack">
+  <!-- MÉTODO -->
+  <section class="section" id="metodo">
     <div class="container">
-      <p class="section-eyebrow center">// tecnologias</p>
-      <h2 class="section-title center">Stack &amp; Ferramentas</h2>
-      <div class="stack__grid">
-        <div class="stack-group">
-          <h3 class="stack-group__label">Data Science</h3>
-          <div class="stack-items">
-            <div class="stack-item"><span class="stack-icon">🐍</span>Python</div>
-            <div class="stack-item"><span class="stack-icon">📊</span>Pandas</div>
-            <div class="stack-item"><span class="stack-icon">🤖</span>Scikit-learn</div>
-            <div class="stack-item"><span class="stack-icon">🔥</span>PySpark</div>
-            <div class="stack-item"><span class="stack-icon">📈</span>Statsmodels</div>
-          </div>
+      <p class="section-eyebrow center">// como eu trabalho</p>
+      <h2 class="section-title center">Um método, não um projeto solto</h2>
+      <div class="method__grid">
+        <div class="method-step">
+          <div class="method-step__num">1</div>
+          <h3>Diagnóstico</h3>
+          <p>Mapeio as fontes de dados existentes, identifico gaps de infraestrutura (PI System, redes TA/TI, bancos) e os pontos de maior impacto no negócio.</p>
         </div>
-        <div class="stack-group">
-          <h3 class="stack-group__label">Business Intelligence</h3>
-          <div class="stack-items">
-            <div class="stack-item"><span class="stack-icon">📋</span>Power BI</div>
-            <div class="stack-item"><span class="stack-icon">🗃️</span>SQL Server</div>
-            <div class="stack-item"><span class="stack-icon">🐘</span>Oracle</div>
-            <div class="stack-item"><span class="stack-icon">📑</span>DAX</div>
-            <div class="stack-item"><span class="stack-icon">🔄</span>ETL/SSIS</div>
-          </div>
+        <div class="method-step">
+          <div class="method-step__num">2</div>
+          <h3>Estruturação</h3>
+          <p>Construo ou reorganizo a base: PI AF, interfaces OPC, dataflows e modelagem — a fundação que garante dado confiável e escalável.</p>
         </div>
-        <div class="stack-group">
-          <h3 class="stack-group__label">Cloud &amp; Engenharia</h3>
-          <div class="stack-items">
-            <div class="stack-item"><span class="stack-icon">☁️</span>Azure Cloud</div>
-            <div class="stack-item"><span class="stack-icon">🪣</span>S3 / Redshift</div>
-            <div class="stack-item"><span class="stack-icon">🐳</span>Docker</div>
-            <div class="stack-item"><span class="stack-icon">🌊</span>Airflow</div>
-            <div class="stack-item"><span class="stack-icon">🔗</span>dbt</div>
-          </div>
+        <div class="method-step">
+          <div class="method-step__num">3</div>
+          <h3>Inteligência</h3>
+          <p>Desenvolvo dashboards e modelos analíticos focados em decisão: indicadores de criticidade, previsão de falhas, rastreabilidade de produto.</p>
         </div>
-        <div class="stack-group">
-          <h3 class="stack-group__label">IoT & PI System</h3>
-          <div class="stack-items">
-            <div class="stack-item"><span class="stack-icon">🏭</span>PI Data Archive</div>
-            <div class="stack-item"><span class="stack-icon">🌐</span>PI Vision</div>
-            <div class="stack-item"><span class="stack-icon">🗂️</span>PI Asset Framework</div>
-            <div class="stack-item"><span class="stack-icon">🔌</span>PI Interfaces</div>
-            <div class="stack-item"><span class="stack-icon">📡</span>PI Web API</div>
-          </div>
+        <div class="method-step">
+          <div class="method-step__num">4</div>
+          <h3>Entrega Contínua</h3>
+          <p>Acompanho a adoção pelas equipes de engenharia, produção e gestão — ajustando o que for preciso para o dado virar rotina de decisão.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROJETOS -->
-  <section class="section" id="projetos">
+  <!-- CASES -->
+  <section class="section section--dark" id="cases">
     <div class="container">
-      <p class="section-eyebrow center">// portfólio</p>
-      <h2 class="section-title center">Projetos Selecionados</h2>
+      <p class="section-eyebrow center">// resultados aplicados</p>
+      <h2 class="section-title center">Cases reais em ambiente industrial</h2>
       <div class="projects__grid">
 
-        <!-- PROJETO DESTAQUE: BATCH TRACKING -->
         <article class="project-card project-card--featured">
           <div class="project-card__header">
-            <span class="project-card__type">PI System · Event Frames · Power BI</span>
-            <div class="project-card__links">
-              <a href="#" aria-label="GitHub" class="project-link">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              </a>
-            </div>
+            <span class="project-card__type">Rastreabilidade · PI AF · Event Frames</span>
           </div>
-          <h3 class="project-card__title">Batch Tracking — Rastreamento de Lote Industrial (Planta Limeira)</h3>
+          <h3 class="project-card__title">Rastreamento de Lote — Visibilidade Completa do Processo</h3>
           <p class="project-card__desc">
-            Algoritmo de rastreamento retroativo de lotes de produto ao longo de ~15 áreas do processo fabril. A partir do número de lote inserido no estágio final, o sistema percorre cada etapa anterior identificando os <em>flags</em> de passagem de volume, os parâmetros de processo e os dados de qualidade registrados nos Event Frames do PI AF. O resultado é consolidado em um report Power BI que integra todos os Event Frames com uma API JSON do sistema de rastreabilidade de matéria-prima — cruzando notas fiscais, volumes de entrada e o histórico completo de fabricação do produto final.
+            Construí um sistema de rastreamento retroativo de lotes ao longo de ~15 áreas de uma planta industrial, permitindo identificar — a partir de um único número de lote — todos os parâmetros de processo e qualidade pelos quais o produto passou. Resultado: rastreabilidade completa de matéria-prima a produto final, consolidada em um report executivo que integra Event Frames do PI AF com o sistema de rastreabilidade da planta.
           </p>
+          <div class="project-card__impact">
+            <span class="impact-tag">Rastreabilidade ponta a ponta</span>
+            <span class="impact-tag">Resposta rápida a desvios de qualidade</span>
+          </div>
           <div class="project-card__pbi-embed">
             <div class="pbi-placeholder" id="pbi-batch">
               <div class="pbi-placeholder__inner">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="7" height="7" rx="1" fill="#F2C811"/><rect x="14" y="3" width="7" height="7" rx="1" fill="#F2C811" opacity="0.6"/><rect x="3" y="14" width="7" height="7" rx="1" fill="#F2C811" opacity="0.6"/><rect x="14" y="14" width="7" height="7" rx="1" fill="#F2C811" opacity="0.3"/></svg>
                 <p>Cole o link embed do Power BI para visualizar o report</p>
-                <input
-                  type="text"
-                  class="pbi-input"
-                  id="pbi-input-batch"
-                  placeholder="https://app.powerbi.com/reportEmbed?reportId=..."
-                />
+                <input type="text" class="pbi-input" id="pbi-input-batch" placeholder="https://app.powerbi.com/view?r=..." />
                 <button class="pbi-btn" onclick="loadPBI('pbi-batch', 'pbi-input-batch')">Carregar Report</button>
               </div>
             </div>
           </div>
           <div class="project-card__tech">
-            <span>PI AF</span><span>Event Frames</span><span>PI Tags</span><span>Power BI</span><span>API JSON</span><span>Python</span>
+            <span>PI AF</span><span>Event Frames</span><span>PI Tags</span><span>Power BI</span><span>API JSON</span>
           </div>
         </article>
-      
-        <!-- PROJETO: PLATAFORMA DE ALARMES INDUSTRIAIS -->
+
         <article class="project-card">
           <div class="project-card__header">
-            <span class="project-card__type">Power BI · SQL · Redes TA/TI · Segurança de Processos</span>
-            <div class="project-card__links">
-              <a href="#" aria-label="GitHub" class="project-link">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              </a>
-            </div>
+            <span class="project-card__type">Segurança de Processos · Power BI</span>
           </div>
-          <h3 class="project-card__title">Plataforma de Alarmes Industriais — Monitoramento e Segurança de Processos</h3>
+          <h3 class="project-card__title">Plataforma de Alarmes — Decisão em Tempo Real</h3>
           <p class="project-card__desc">
-            Solução end-to-end de monitoramento de alarmes para plantas industriais, desde a integração entre redes TA e TI até a entrega de indicadores estratégicos em Power BI. Os dados são extraídos de banco SQL em rede industrial — com histórico de alarmes por tipo, horário de acionamento e duração até retirada — tratados via Power Query em dataflows na nuvem e disponibilizados em um dashboard com foco em segurança de processos e tomada de decisão em tempo real.
+            Integrei redes TA e TI para extrair histórico de alarmes industriais (tipo, horário, duração) direto do banco SQL de planta, tratei via Power Query em dataflows e construí indicadores de criticidade e segurança de processos para apoiar decisão operacional imediata.
           </p>
+          <div class="project-card__impact">
+            <span class="impact-tag">Redução de tempo de resposta a alarmes críticos</span>
+          </div>
           <div class="project-card__pbi-embed">
             <div class="pbi-placeholder" id="pbi-alarmes">
               <div class="pbi-placeholder__inner">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="7" height="7" rx="1" fill="#F2C811"/><rect x="14" y="3" width="7" height="7" rx="1" fill="#F2C811" opacity="0.6"/><rect x="3" y="14" width="7" height="7" rx="1" fill="#F2C811" opacity="0.6"/><rect x="14" y="14" width="7" height="7" rx="1" fill="#F2C811" opacity="0.3"/></svg>
                 <p>Cole o link embed do Power BI para visualizar o report</p>
-                <input
-                  type="text"
-                  class="pbi-input"
-                  id="pbi-input-alarmes"
-                  placeholder="https://app.powerbi.com/view?r=..."
-                />
+                <input type="text" class="pbi-input" id="pbi-input-alarmes" placeholder="https://app.powerbi.com/view?r=..." />
                 <button class="pbi-btn" onclick="loadPBI('pbi-alarmes', 'pbi-input-alarmes')">Carregar Report</button>
               </div>
             </div>
           </div>
           <div class="project-card__tech">
-            <span>Power BI</span><span>SQL</span><span>Power Query</span><span>Dataflows</span><span>Redes TA/TI</span><span>Segurança de Processos</span>
+            <span>Power BI</span><span>SQL</span><span>Power Query</span><span>Redes TA/TI</span>
           </div>
         </article>
-      
-        <!-- PROJETO: DATA WAREHOUSE MULTINACIONAL -->
+
         <article class="project-card">
           <div class="project-card__header">
-            <span class="project-card__type">Engenharia de Dados · DW · ETL</span>
-            <div class="project-card__links">
-              <a href="#" aria-label="GitHub" class="project-link">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              </a>
-            </div>
+            <span class="project-card__type">Engenharia de Dados · DW Multinacional</span>
           </div>
-          <h3 class="project-card__title">Gestão de Data Warehouses — 2 Plantas Multinacionais</h3>
+          <h3 class="project-card__title">Data Warehouse Unificado — 2 Plantas, 1 Visão</h3>
           <p class="project-card__desc">
-            Responsável pelo end-to-end dos DWs de duas plantas industriais: ingestão de dados de fontes heterogêneas (SQL Server, Oracle, APIs REST, OLEDB, ODBC), pré-ETL customizado por caso de uso e governança dos dataflows no Power BI Dataflows e pipelines Python. Toda a cadeia desde a extração na fonte até a disponibilização para os usuários finais.
+            Estruturei o ciclo completo de dois Data Warehouses industriais — ingestão de SQL Server, Oracle, APIs REST, OLEDB e ODBC, pré-ETL por caso de uso e governança de dataflows — entregando uma base única e confiável para toda a operação multinacional.
           </p>
+          <div class="project-card__impact">
+            <span class="impact-tag">Padronização de dados entre plantas</span>
+          </div>
           <div class="project-card__tech">
-            <span>SQL Server</span><span>Oracle</span><span>OLEDB/ODBC</span><span>Power BI Dataflows</span><span>Python</span><span>APIs REST</span>
+            <span>SQL Server</span><span>Oracle</span><span>OLEDB/ODBC</span><span>Power BI Dataflows</span>
           </div>
         </article>
-      
-        <!-- PROJETO: INFRAESTRUTURA PI SYSTEM & DIGITAL TWIN -->
+
         <article class="project-card">
           <div class="project-card__header">
-            <span class="project-card__type">PI System · OPC · Infraestrutura · Digital Twin</span>
-            <div class="project-card__links">
-              <a href="#" aria-label="GitHub" class="project-link">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              </a>
-            </div>
+            <span class="project-card__type">Infraestrutura · PI System · Digital Twin</span>
           </div>
-          <h3 class="project-card__title">Reestruturação PI System & Digital Twin da Planta</h3>
+          <h3 class="project-card__title">Digital Twin & Infraestrutura Redundante</h3>
           <p class="project-card__desc">
-            Reestruturação completa das VMs da infraestrutura PI System (PI Vision, PI AF, SQL Server, PI Data Archive/Historiador), implementando comunicação redundante entre interfaces OPC — com failover automático onde cada interface opera como backup da outra. Desenvolvimento de uma estrutura espelho do supervisório em PI Vision, criando um <em>digital twin</em> da planta acessível a engenharia, produção, supervisão e gerência. Inclui análises de falhas de equipamentos com correlação de causas via PI AF Analytics e investigação de desvios de produção por meio de séries temporais históricas.
+            Reestruturei a infraestrutura de VMs do PI System (Vision, AF, SQL, Data Archive) com comunicação OPC redundante entre interfaces e desenvolvi um espelho digital do supervisório — acessível para engenharia, produção e gestão analisarem falhas e desvios de produção remotamente.
           </p>
+          <div class="project-card__impact">
+            <span class="impact-tag">Continuidade operacional via failover</span>
+            <span class="impact-tag">Acesso remoto multissetorial à planta</span>
+          </div>
           <div class="project-card__tech">
-            <span>PI Vision</span><span>PI AF</span><span>OPC DA/UA</span><span>Windows Server</span><span>PI Data Archive</span><span>Digital Twin</span>
+            <span>PI Vision</span><span>PI AF</span><span>OPC DA/UA</span><span>Digital Twin</span>
           </div>
         </article>
-      
-      </div>
-      <div class="projects__more">
-        <a href="https://github.com/seuusuario" class="btn btn--ghost" target="_blank">Ver todos no GitHub ↗</a>
+
       </div>
     </div>
   </section>
 
-  <!-- XP PROFISSIONAL -->
-  <section class="section section--dark" id="experiencia">
+  <!-- SOBRE / AUTORIDADE -->
+  <section class="section" id="sobre">
     <div class="container">
-      <p class="section-eyebrow">// trajetória</p>
-      <h2 class="section-title">Experiência Profissional</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-item__meta">
-            <span class="timeline-item__date">2024 — atual</span>
-            <span class="timeline-item__location">🇧🇷 Brasil</span>
-          </div>
-          <div class="timeline-item__body">
-            <div class="timeline-item__dot"></div>
-            <h3 class="timeline-item__role">Analista de Dados Pleno & PI System Expert</p>
-              <p class="timeline-item__company">Tate & Lyle Brasil</p>
-            <p class="timeline-item__desc">Responsável pela arquitetura e administração do ambiente PI System em operações industriais, integrando dados de campo ao ecossistema de analytics da empresa. Atuação end-to-end: desde a configuração de interfaces e gerenciamento de PI Tags até a entrega de dashboards executivos em PI Vision para controle de ativos em tempo real, além de gerenciamento dos 3 data warehouses de Business Intelligence Data nas plantas de Limeira e Matão.</p>
-            <ul class="timeline-item__highlights">
-              <li>Gerenciamento e estruturação de banco de PI Tags com centenas de pontos de medição</li>
-              <li>Modelagem de hierarquias de ativos no PI Asset Framework (AF) com templates e analytics embarcados</li>
-              <li>Implementação e manutenção de infraestrutura PI Vision para monitoramento industrial em tempo real</li>
-              <li>Configuração de PI Interfaces e conectores OPC DA/UA para coleta de dados de campo</li>
-              <li>Desenvolvimento de análises no PI AF Analytics para cálculos de KPIs operacionais e detecção de anomalias</li>
-              <li>Integração do PI System com Power BI e Excel via PI DataLink e PI Web API</li>
-              <li>Projetar, desenvolver e manter soluções Power BI de alto desempenho, gerenciando todo o ciclo de vida dos dados: ingestão, ETL (Power Query / M), modelagem semântica, DAX, otimização de relatórios e governança de espaço de trabalho corporativo. Entregar dashboards dinâmicos para operações estratégicas, planejamento financeiro, logística, controle de qualidade e monitoramento industrial.</li>
-            </ul>
+      <div class="sobre__grid">
+        <div class="sobre__photo">
+          <div class="photo-frame">
+            <img src="img/profile.jpeg" alt="Leonardo Cremasco" />
           </div>
         </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-item__meta">
-            <span class="timeline-item__date">2023 — 2025</span>
-            <span class="timeline-item__location">🇧🇷 Brasil</span>
-          </div>
-          <div class="timeline-item__body">
-            <div class="timeline-item__dot"></div>
-            <h3 class="timeline-item__role">Estagiário — Análise de Dados & PI System</h3>
-            <p class="timeline-item__company">CP Kelco Brasil S/A</p>
-            <p class="timeline-item__desc">Estágio com foco em análise de dados industriais e primeiros passos no ecossistema PI System. Suporte na configuração de ambientes, extração e tratamento de dados de processo para geração de relatórios e dashboards operacionais.</p>
-            <ul class="timeline-item__highlights">
-              <li>Apoio na configuração e validação de PI Tags e estruturas AF</li>
-              <li>Extração e análise de séries temporais de dados industriais via PI DataLink e Python</li>
-              <li>Criação de displays em PI Vision para acompanhamento de variáveis de processo</li>
-              <li>Suporte à implantação de VMs e configuração de servidores PI em ambiente Windows Server</li>
-            </ul>
+        <div class="sobre__text">
+          <p class="section-eyebrow">// quem está por trás da solução</p>
+          <h2 class="section-title">Background técnico de chão de fábrica, <em>visão de negócio</em> no resultado</h2>
+          <p class="sobre__bio">
+            Sou analista e cientista de dados especializado no ecossistema <strong>PI System (AVEVA)</strong> e em <strong>IoT industrial</strong>, com experiência prática em plantas de multinacionais — não apenas analisando dados, mas construindo a infraestrutura que os torna confiáveis.
+          </p>
+          <p class="sobre__bio">
+            Atuei na conexão entre redes TA e TI, configuração de interfaces e historiadores, modelagem de ativos em PI AF e entrega de dashboards executivos — o que me dá uma visão rara: entendo tanto a origem técnica do dado industrial quanto o que a diretoria precisa ver para decidir.
+          </p>
+          <div class="sobre__tags">
+            <span class="tag">PI System (AVEVA)</span>
+            <span class="tag">IoT Industrial</span>
+            <span class="tag">Event Frames & PI AF</span>
+            <span class="tag">Power BI & DAX</span>
+            <span class="tag">Engenharia de Dados</span>
+            <span class="tag">Ambiente Multinacional</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTATO -->
-  <section class="section" id="contato">
+  <!-- CONTATO / CTA FINAL -->
+  <section class="section section--dark" id="contato">
     <div class="container">
       <div class="contact__inner">
-        <p class="section-eyebrow center">// contato</p>
-        <h2 class="section-title center">Vamos conversar?</h2>
-        <p class="contact__subtitle">Estou aberto a novas oportunidades, colaborações e projetos desafiadores. Manda uma mensagem.</p>
+        <p class="section-eyebrow center">// vamos conversar</p>
+        <h2 class="section-title center">Sua planta já tem o dado. <em>Vamos fazer ele trabalhar por você.</em></h2>
+        <p class="contact__subtitle">Conte um pouco do seu desafio — gestão de ativos, rastreabilidade, alarmes, infraestrutura PI System ou analytics preditivo. Retorno com um diagnóstico inicial.</p>
         <form class="contact-form" id="contact-form" novalidate>
           <div class="form-row">
             <div class="form-group">
@@ -384,16 +331,16 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="subject">Assunto</label>
-            <input type="text" id="subject" name="subject" placeholder="Sobre o que você quer falar?" />
+            <label for="subject">Empresa / Área de Interesse</label>
+            <input type="text" id="subject" name="subject" placeholder="Ex: Indústria química — gestão de alarmes" />
           </div>
           <div class="form-group">
-            <label for="message">Mensagem</label>
-            <textarea id="message" name="message" rows="5" placeholder="Conte mais sobre o projeto ou oportunidade..." required></textarea>
+            <label for="message">Conte sobre o desafio</label>
+            <textarea id="message" name="message" rows="5" placeholder="Descreva o cenário atual e o que gostaria de resolver..." required></textarea>
             <span class="form-error" id="message-error"></span>
           </div>
           <button type="submit" class="btn btn--primary btn--full" id="submit-btn">
-            <span class="btn-text">Enviar Mensagem</span>
+            <span class="btn-text">Solicitar Diagnóstico Inicial</span>
             <span class="btn-loading" hidden>Enviando...</span>
           </button>
           <div class="form-success" id="form-success" hidden>
@@ -404,11 +351,11 @@
           </div>
         </form>
         <div class="contact__social">
-          <a href="https://www.linkedin.com/in/leonardocremasco/" target="_blank" class="social-link">LinkedIn</a>
+          <a href="https://linkedin.com/in/leonardocremasco" target="_blank" class="social-link">LinkedIn</a>
           <span class="social-sep">·</span>
-          <a href="https://github.com/leocremasco" target="_blank" class="social-link">GitHub</a>
+          <a href="https://github.com/seuusuario" target="_blank" class="social-link">GitHub</a>
           <span class="social-sep">·</span>
-          <a href="mailto:lcremasco@outlook.com" class="social-link">Email</a>
+          <a href="mailto:lcremasco@outlook.com" class="social-link">lcremasco@outlook.com</a>
         </div>
       </div>
     </div>
@@ -417,7 +364,7 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <p>Desenvolvido <span class="heart"></span> por <strong>Leonardo Cremasco</strong> · <span id="footer-year"></span></p>
+      <p>Leonardo Cremasco · Data Analytics & PI System Solutions · <span id="footer-year"></span></p>
       <a href="#hero" class="back-to-top">↑ Voltar ao topo</a>
     </div>
   </footer>
